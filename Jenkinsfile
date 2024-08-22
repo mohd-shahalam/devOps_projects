@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/yourusername/devops-automation-app.git'
+                git 'https://github.com/mohd-shahalam/devOps_projects.git'
             }
         }
         stage('Build Docker Image') {
             steps {
                 script {
-                    dockerImage = docker.build("yourdockerhubusername/devops-backend")
+                    dockerImage = docker.build("shahalam8535/drum-kit-docker-image")
                 }
             }
         }
